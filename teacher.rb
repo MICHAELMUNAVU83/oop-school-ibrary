@@ -1,12 +1,13 @@
-require_relative "person.rb"
+require_relative 'person'
 class Teacher < Person
-    attr_accessor :specialization
-    def initialize ( specialization ,age, parent_permission =  false ,name="Unkown")
-        super(age, parent_permission =  false ,name="Unkown")
-        @specialization= specialization
-    end
-    def can_use_services
-        return true
-    end
+  attr_accessor :specialization
 
+  def initialize(specialization, age, _name = 'Unknown')
+    super(age, _name = 'Unknown')
+    @specialization = specialization
+  end
+
+  def can_use_services
+    true
+  end
 end
