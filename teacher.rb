@@ -1,13 +1,15 @@
-require_relative 'person'
-class Teacher < Person
-  attr_accessor :specialization
+# rubocop: disable Style/OptionalBooleanParameter
+require_relative './person'
 
-  def initialize(specialization, age, name = 'Unknown')
-    super(age, name)
+class Teacher < Person
+  def initialize(age, specialization, name = 'Unknown', parent_permission = true)
+    super(age, name, parent_permission)
     @specialization = specialization
   end
 
-  def can_use_services
+  def can_use_services?
     true
   end
 end
+
+# rubocop: enable Style/OptionalBooleanParameter
