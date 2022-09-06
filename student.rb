@@ -1,10 +1,12 @@
-require './person'
+# rubocop: disable Style/OptionalBooleanParameter
+require_relative './person'
 
 class Student < Person
-  attr_reader :classroom, :parent_permission, :name, :age
+  # holding the relationship
+  attr_reader :classroom
 
-  def initialize(age, name, classroom, parent_permission: true)
-    super(age, name, parent_permission: parent_permission)
+  def initialize(age, classroom, name = 'Unknown', parent_permission = true)
+    super(age, name, parent_permission)
     @classroom = classroom
   end
 
@@ -12,8 +14,10 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 
-  def add_classroom=(classroom)
+  def classroom=(classroom)
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
   end
 end
+
+# rubocop: enable Style/OptionalBooleanParameter

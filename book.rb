@@ -1,6 +1,3 @@
-require './rental'
-require 'json'
-
 class Book
   attr_accessor :title, :author, :rentals
 
@@ -10,19 +7,7 @@ class Book
     @rentals = []
   end
 
-  def add_rentals(date, person)
+  def add_rental(date, person)
     Rental.new(date, person, self)
-  end
-
-  def to_json(*_args)
-    {
-      title: @title,
-      author: @author
-    }.to_json
-  end
-
-  def self.from_json(string)
-    data = JSON.parse(string)
-    new(data['title'], data['author'])
   end
 end
