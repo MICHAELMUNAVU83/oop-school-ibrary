@@ -14,6 +14,7 @@ module BooksController
     end
     book_store
   end
+
   def save_books_to_file
     book_store = []
     @books.each do |book|
