@@ -1,1 +1,1 @@
-[{"id":782,"age":"19","name":true,"parent_permission":"12","classroom":"mandela","className":"Student"},{"id":816,"name":"math","age":"mwansa","specialization":"20","className":"Teacher"}]
+[{"id":782,"age":"19","name":"12","parent_permission":"mandela","classroom":true,"className":"Student"},{"id":816,"name":"20","age":"math","specialization":"mwansa","className":"Teacher"}]
