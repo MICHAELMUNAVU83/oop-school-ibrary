@@ -16,7 +16,6 @@ describe Book do
 end
 
 describe Book do
-  
   before :each do
     @book = Book.new nil, 'Harry Potter', 'J.K. Rowling'
   end
