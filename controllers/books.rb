@@ -1,5 +1,6 @@
 require 'json'
 require './models/book'
+
 module BooksController
   def load_books
     book_store = []

@@ -1,6 +1,7 @@
 require 'json'
 require './models/student'
 require './models/teacher'
+
 module PeopleController
   def load_people
     people_store = []
